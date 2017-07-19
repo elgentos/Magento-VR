@@ -1,0 +1,24 @@
+<!-- GUI -->
+<a-entity  position="0 0 -0.47">
+ <!-- <a-animation attribute="position" dur="1200" delay="500" to="0 0 -0.47"></a-animation> -->
+
+  <!-- Buttons -->
+  <a-entity id="startScreen" rotation="0 0 0" position="0 1.8 -3.5">
+    <a-entity position="0 1 0" id="interactImage">
+    </a-entity>
+    <a-text id="interactTip" value="No device detected.." align="center"></a-text>
+    <a-entity hexagon-button="text: Start shopping" onclick="openProductList()" position="0 -1 0"></a-entity>
+  </a-entity>
+
+  <a-entity id="categoryList" visible="false">
+    <a-text value="Pick a category" position="0 4 -3.5" scale="2 2 2" align="center"></a-text>
+  </a-entity>
+
+  <a-entity id="productList" visible="false"></a-entity>
+
+  <a-entity id="productDetails" rotation="0 -90 0" position="4 1.6 0.441" visible="false">
+    <a-text value="Productbeschrijving" position="0 2.385 0" scale="2 2 2" align="center"></a-text>
+    <a-image src="assets/img/product-description.png" scale="5.5 3 3"></a-image>
+    <a-text id="productDescription" align="center" value="Lorem ipsum" color="#424242"></a-text>
+  </a-entity>
+</a-entity>

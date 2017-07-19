@@ -1,0 +1,30 @@
+<!-- Assets -->
+<a-assets>
+  <a-mixin id="controller" 
+           super-hands="grabStartButtons: triggerdown; grabEndButtons: gripdown; stretchStartButtons: trackpaddown; stretchEndButtons: trackpadup"
+           controller-loaded
+           sphere-collider="objects: .interactable"></a-mixin>
+  <a-mixin id="controller-loaded" static-body="shape: sphere; sphereRadius: 0.02;"></a-mixin>
+  <a-mixin id="gui-element" color="red" gui-listener></a-mixin>
+  <a-mixin id="textlabel" 
+           position="0 0 0.6"
+           scale="3 3 3"
+           rotation="0 0 0"
+           geometry="primitive: plane; width: 0.8; height: 0.15"
+           text="value: Spawn shoe"
+           material="color: #000; opacity: 0"></a-mixin>
+    <a-mixin id="bat" grabbable stretchable hoverable
+         material="color: brown"></a-mixin>
+    <a-mixin id="bat-hovered" material="opacity: 0.7; transparent: true"></a-mixin>
+    <a-mixin id="bat-stretched" material="wireframe: true"></a-mixin>
+</a-assets>
+
+</a-assets>
+
+<!-- Vive Controllers -->
+<a-entity id="viveControllers"></a-entity>
+
+<!-- Main controller -->
+<a-entity id='cameraWrapper' position="0 0 0">
+  <a-camera camera look-controls wasd-controls id="mainCamera"></a-camera>
+</a-entity>

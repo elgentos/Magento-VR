@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Elgentos_Vrshop>
+            <version>0.1.0</version>
+        </Elgentos_Vrshop>
+    </modules>
+
+    <frontend>
+        <routers>
+            <vrshop>
+                <use>standard</use>
+                <args>
+                    <module>Elgentos_Vrshop</module>
+                    <frontName>vrshop</frontName>
+                </args>
+            </vrshop>
+        </routers>
+    </frontend>
+
+    <global>
+        <models>
+            <vrshop>
+                <class>Elgentos_Vrshop_Model</class>
+            </vrshop>
+
+            <vrshop_adminhtml>
+                <class>Elgentos_Vrshop_Adminhtml_Model</class>
+            </vrshop_adminhtml>
+        </models>
+
+        <helpers>
+            <vrshop>
+                <class>Elgentos_Vrshop_Helper</class>
+            </vrshop>
+        </helpers>
+
+        <resources>
+            <elgentos_vrshop_setup>
+                <setup>
+                    <module>Elgentos_Vrshop</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+            </elgentos_vrshop_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <vrshop>
+                                            <title>VR - All</title>
+                                        </vrshop>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

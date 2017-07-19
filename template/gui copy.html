@@ -1,0 +1,42 @@
+<!-- GUI -->
+<a-entity  position="-2 -10 -0.47">
+ <a-animation attribute="position" dur="1200" delay="500" to="-2 0 -0.47"></a-animation>
+
+  <!-- Background -->
+  <a-plane color="black" height="1.5" width="2.5" position="-2.82 3.61 0.50" opacity="0.6" rotation="0 90 0" scale="1.45 0.41 1.00"></a-plane>
+  <a-plane color="black" height="1.5" width="2.5" position="-2.82 2.1 0.5" scale="1.45 1.45 1.45" rotation="0 90 0" opacity="0.6"></a-plane>
+
+  <!-- Voice GUI -->
+  <a-image id="mic_icon" src="assets/img/icons/mic.png" position="-2.81 3.63 1.91" scale="0.29 0.29 0.29" rotation="0 90 0"></a-image>
+  <a-text id="voice_result_string" id="vue" value="How can I help you?" height="0.1" position="-2.78 3.61 1.57" rotation="0 90 0"></a-text>
+
+  <!-- Item description -->
+  <a-text id="productTitle" value="" position="-2.81 2.93 1.95" rotation="0 90 0"></a-text>
+  <a-text id="productDescription" value="" position="-2.81 2.17 1.95" rotation="0 90 0" scale="0.5 0.5 0.5"></a-text>
+
+  <!-- Product Photo Gallery -->
+  <a-entity list-column="offset: 1.2" list-column position="-1.94 3.27 -2.61" scale="2.43 1.29 0.63" rotation="0 45 0">
+    <a-image id="productImage1" src="assets/img/placeholder.png"></a-image>
+    <a-image id="productImage2" src="assets/img/placeholder.png"></a-image>
+  </a-entity>
+
+  <!-- Buttons -->
+  <a-entity id="categoryList" list-column="offset: 0.6" rotation="0 135 0" position="-2.07 3.68 3.94">
+    <a-text onclick="openProductList()" gui-text="value: Bekkens, Cymbals"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Bellen"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Bongo's en Conga's"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Boomwhackers"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Cajons"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Chimes Windgongs"></a-text>
+    <a-text onclick="openProductList()" gui-text="value: Darkuba's"></a-text>
+  </a-entity>
+
+   <!-- Buttons -->
+  <a-entity id="productList" list-column="offset: 0.6" rotation="0 135 0" position="-2.07 3.68 3.94" visible="false">
+    <a-text onclick="closeProductList()" gui-text="value: <- Terug"></a-text>
+    <a-text onclick="setProduct('shoe');" gui-text="value: Cajon X-one Styles, Schlagwerk"></a-text>
+    <a-text onclick="setProduct('basket');" gui-text="value: Cajon Fineline Comfort Tineo, Schlagwerk"></a-text>
+    <a-text onclick="setProduct('zeppelin');" gui-text="value: Cajon Comparsa, Schlagwerk"></a-text>
+    <a-text onclick="setProduct('car');" gui-text="value: Cajon 2inone Barista, Schlagwerk"></a-text>
+  </a-entity>
+</a-entity>

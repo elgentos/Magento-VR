@@ -1,0 +1,22 @@
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<vrshop translate="title" module="vrshop_mymodule">
+										<title>vrshop</title>
+										<sort_order>999</sort_order>
+									</vrshop>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>
