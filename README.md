@@ -1,6 +1,6 @@
 ![Logo](https://user-images.githubusercontent.com/3017676/28371897-888017be-6c9e-11e7-886b-cff3f4ffcd21.png)
 
-A virtual reality extension for Magento. With this plugin, you can extend any Magento 1 shop with an interactive VR shop. Check out our blog series about VR on our [website]("https://www.elgentos.nl/blog/building-a-vr-shop-part-1/")!
+A virtual reality extension for Magento. With this plugin, you can extend any Magento 1 shop with an interactive VR shop. Check out our blog series about VR on our [website](https://elgentos.nl/blog/building-a-vr-shop-part-1/)!
 
 # Features
   - Support for mobile VR (for example GearVR, Google Cardboard)
